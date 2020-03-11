@@ -11,7 +11,8 @@ const conditions = (props) => {
                <div>
                    <h1>{props.responseObj.name}</h1>
                    <div className="card bg-light mx-auto">
-                        <p>Il fait actuellement {props.responseObj.main.temp}°C, ressenti : {props.responseObj.main.feels_like}°C</p>
+                        <p>Il fait actuellement {props.responseObj.main.temp}°C</p>
+                        <p>Ressenti : {props.responseObj.main.feels_like}°C</p>
                         <img src={`http://openweathermap.org/img/w/${props.responseObj.weather[0].icon}.png`} alt="img" style={{'width':'50px','margin':'auto'}} />
                         <div className="card-body">
                             <p className="btn btn-dark btn-outline-light">{props.responseObj.weather[0].description}</p>
