@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Weather from '../Weather/Weather'
+
 import './Search.css'
 
 class Search extends Component {
@@ -11,6 +12,7 @@ class Search extends Component {
                 <Header />
                 <div className="bodySearch text-center">
                    <Weather />
+                   
                 </div>
                 <Footer />
             </div>

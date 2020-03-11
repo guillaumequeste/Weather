@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Conditions from '../Conditions/Conditions';
-import './Weather.css';
+import ConditionsForecast from '../ConditionsForecast/ConditionsForecast';
+import './Forecast.css';
 
-const Weather = () => {
+const Forecast = () => {
     let [responseObj, setResponseObj] = useState({});
     let [city, setCity] = useState('');
     let [unit, setUnit] = useState('metric');
     let [error, setError] = useState(false);
     let [loading, setLoading] = useState(false);
 
-   function getWeather(e) {
+   function getForecast(e) {
     e.preventDefault();
 
     if (city.length === 0) {
@@ -25,7 +25,9 @@ const Weather = () => {
    let uriEncodedCity = encodeURIComponent(city);
    let appKey = process.env.REACT_APP_API_KEY
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${unit}&lang=fr&appid=${appKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&lang=fr&appid=51fc8505d55fe845e4c757ea6b9ff0cf`, {
+        "method": "GET" 
+    })
     .then(response => response.json())
     .then(response => {
         if (response.cod !== 200) {
@@ -47,7 +49,7 @@ const Weather = () => {
         <div>
             {JSON.stringify(responseObj)}
         </div>
-        <form onSubmit={getWeather}>
+        <form onSubmit={getForecast}>
                 <input
                     type="text"
                     placeholder="Entrer votre ville"
@@ -76,9 +78,9 @@ const Weather = () => {
                         />
                     Fahrenheit
                 </label>
-                <button className="Button" type="submit">Météo</button>
+                <button className="Button" type="submit">Prévisions</button>
             </form>
-        <Conditions 
+        <ConditionsForecast 
             responseObj={responseObj}
             error={error}
             loading={loading} />
@@ -86,4 +88,4 @@ const Weather = () => {
 
    )
 }
-export default Weather;
+export default Forecast;
