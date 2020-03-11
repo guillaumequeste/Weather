@@ -1,8 +1,5 @@
-.row {
-    width: 100vw;
-}
-
-.bodyApp {
+.bodyContact {
     background-color: green;
     height: 85vh;
+    padding-top: 35vh;
 }
