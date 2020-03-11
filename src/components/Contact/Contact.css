@@ -1,5 +1,14 @@
 .bodyContact {
-    background-color: green;
+    height: 100vh;
+    background-image: url("../../img/ciel.jpg");
+    background-size: cover;
+}
+
+.contact {
     height: 85vh;
-    padding-top: 35vh;
+    display: flex;
+}
+
+.contact2 {
+    margin: auto;
 }

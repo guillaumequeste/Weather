@@ -1,5 +1,14 @@
 .bodyErrorNotFound {
-    background-color: green;
+    height: 100vh;
+    background-image: url("../../img/ciel.jpg");
+    background-size: cover;
+}
+
+.error {
     height: 85vh;
-    line-height: 85vh;
+    display: flex;
+}
+
+.error2 {
+    margin: auto;
 }

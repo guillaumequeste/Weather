@@ -7,11 +7,15 @@ class ErrorNotFound extends Component {
     render () {
         return (
             <div>
-                <Header />
-                <div className="bodyErrorNotFound text-center">
-                    <p>Erreur Not Found</p>
+                <div className="bodyErrorNotFound">
+                    <Header />
+                    <div className="error">
+                        <div className="error2">
+                            <div>Il n'y a rien ici...</div>
+                        </div>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
             </div>
         )
     }
