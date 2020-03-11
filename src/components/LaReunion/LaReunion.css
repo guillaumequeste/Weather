@@ -3,6 +3,7 @@
 }
 
 .bodyLaReunion {
-    background-color: green;
-    min-height: 85vh;
+    min-height: 100vh;
+    background-image: url("../../img/ciel.jpg");
+    background-size: cover;
 }

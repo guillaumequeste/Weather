@@ -80,7 +80,7 @@ const Weather = () => {
                     Fahrenheit
                 </label>
             </div>
-            <button type="submit" className="btn btn-primary">Météo</button>
+            <button type="submit" className="btn btn-primary">Go</button>
         </form>
         <div className="pt-2">
         <Conditions 

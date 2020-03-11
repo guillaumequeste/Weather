@@ -8,15 +8,15 @@ class Header extends Component {
             <div className="bodyHeader">
                 <div className="row">
                     <div className="col-6 text-center">
-                        <Link to="/">Dieppe</Link>
+                        <Link to="/" className="linkHeader">Dieppe</Link>
                     </div>
                     <div className="col-6 text-center">
-                        <Link to="/la_reunion">La Réunion</Link>
+                        <Link to="/la_reunion" className="linkHeader">La Réunion</Link>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12 text-center">
-                        <Link to="/search">Chercher une ville</Link>
+                        <Link to="/search" className="linkHeader">Chercher une ville</Link>
                     </div>
                 </div>
             </div>

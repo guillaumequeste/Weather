@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
             <div className="bodyFooter">
                 <div className="row">
-                    <div className="col-12 text-center"><Link to="/contact">Contact</Link></div>
+                    <div className="col-12 text-center"><Link to="/contact" className="linkFooter">Contact</Link></div>
                 </div>
             </div>
         )

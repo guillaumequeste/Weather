@@ -9,11 +9,14 @@ class Search extends Component {
     render () {
         return (
             <div>
-                <Header />
                 <div className="bodySearch text-center">
-                   <Weather />
+                    <Header />
+                    <div className="weather">
+                        <Weather />
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
+                
             </div>
         )
     }

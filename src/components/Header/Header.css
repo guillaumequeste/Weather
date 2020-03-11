@@ -1,3 +1,13 @@
 .bodyHeader {
     height: 10vh;
 }
+
+.linkHeader {
+    color: white;
+    font-weight: bold;
+}
+
+.linkHeader:hover {
+    color: white;
+    font-weight: bold;
+}

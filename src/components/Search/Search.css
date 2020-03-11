@@ -1,4 +1,9 @@
 .bodySearch {
-    background-color: green;
+    height: 100vh;
+    background-image: url("../../img/ciel.jpg");
+    background-size: cover;
+}
+
+.weather {
     height: 85vh;
 }

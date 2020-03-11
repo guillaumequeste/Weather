@@ -19,6 +19,7 @@
 
 .Radio {
     font-size: small;
+    padding-left: 2%;
 }
 
 .Button {
@@ -31,4 +32,8 @@
     color: white;
     cursor: pointer;
     margin: 5px auto;
+}
+
+.btn-primary {
+    font-weight: bold;
 }

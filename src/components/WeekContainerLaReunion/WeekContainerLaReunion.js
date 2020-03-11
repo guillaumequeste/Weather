@@ -26,7 +26,7 @@ class WeekContainerLaReunion extends Component {
     return (
       <div>
         <p>Prévisions météo à 5 jours</p>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center mx-auto">
           {this.formatCards()}
         </div>
       </div>

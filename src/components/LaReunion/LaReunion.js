@@ -33,18 +33,19 @@ class LaReunion extends Component {
         const { temperature, ressenti, description, image } = this.state;
         return (
             <div>
-                <Header />
                 <div className="bodyLaReunion text-center pt-2">
+                    <Header />
                     <div className="card bg-light mx-auto">
-                    <p>Il fait actuellement {temperature}°C, ressenti : {ressenti}°C</p>
+                        <p>Il fait actuellement {temperature}°C</p>
+                        <p>Ressenti : {ressenti}°C</p>
                         <img src={`http://openweathermap.org/img/w/${image}.png`} alt="img" style={{'width':'50px','margin':'auto'}} />
                         <div className="card-body">
                             <p className="btn btn-dark btn-outline-light">{description}</p>
                         </div>
-                        </div>
+                    </div>
                     <WeekContainerLaReunion />
+                    <Footer />
                 </div>
-                <Footer />
             </div>
         )
     }
