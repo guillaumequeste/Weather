@@ -12,7 +12,6 @@ class Search extends Component {
                 <Header />
                 <div className="bodySearch text-center">
                    <Weather />
-                   
                 </div>
                 <Footer />
             </div>

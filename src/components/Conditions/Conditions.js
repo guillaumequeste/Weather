@@ -9,9 +9,13 @@ const conditions = (props) => {
 
            {props.responseObj.cod === 200 ?
                <div>
-                   <p><strong>{props.responseObj.name}</strong></p>
-                   <p>Il fait actuellement {Math.round(props.responseObj.main.temp)} degrés - {props.responseObj.weather[0].description}.</p>
-                   <img src={`http://openweathermap.org/img/w/${props.responseObj.weather[0].icon}.png`} alt="img" />
+                   <div className="card bg-light mx-auto">
+                        <p>Il fait actuellement {props.responseObj.main.temp}°C, ressenti : {props.responseObj.main.feels_like}°C</p>
+                        <img src={`http://openweathermap.org/img/w/${props.responseObj.weather[0].icon}.png`} alt="img" style={{'width':'50px','margin':'auto'}} />
+                        <div className="card-body">
+                            <p className="btn btn-dark btn-outline-light">{props.responseObj.weather[0].description}</p>
+                        </div>
+                    </div>  
                </div>
            : null
            }

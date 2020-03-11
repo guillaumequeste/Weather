@@ -44,11 +44,11 @@ const Weather = () => {
 
    return (
     <div className="bodyWeather">
-        <p>Prévisions météo</p>
-        <div>
+        {/*<div>
             {JSON.stringify(responseObj)}
-        </div>
-        <form onSubmit={getWeather}>
+        </div>*/}
+        <form onSubmit={getWeather} className="pt-2">
+            <div className="form-group">
                 <input
                     type="text"
                     placeholder="Entrer votre ville"
@@ -57,6 +57,8 @@ const Weather = () => {
                     onChange={(e) => setCity(e.target.value)}
                     className="textInput"
                     />
+            </div>
+            <div className="form-group">
                 <label className="Radio">
                     <input
                         type="radio"
@@ -77,12 +79,15 @@ const Weather = () => {
                         />
                     Fahrenheit
                 </label>
-                <button className="Button" type="submit">Météo</button>
-            </form>
+            </div>
+            <button type="submit" className="btn btn-primary">Météo</button>
+        </form>
+        <div className="pt-2">
         <Conditions 
             responseObj={responseObj}
             error={error}
             loading={loading} />
+        </div>
     </div>
 
    )

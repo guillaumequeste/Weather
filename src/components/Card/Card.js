@@ -12,12 +12,12 @@ class Card extends React.Component {
 
     return (
       <div className="col-auto">
-        <div className="card">
+        <div className="card bg-light">
           <h3 className="card-title">{weekdayName}</h3>
           <img src={`http://openweathermap.org/img/w/${this.props.day.weather[0].icon}.png`} alt="img" style={{'width':'50px','margin':'auto'}} />
           <h2>{Math.round(this.props.day.main.temp)} °C</h2>
           <div className="card-body">
-            <p>{this.props.day.weather[0].description}</p>
+            <button className="btn btn-dark btn-outline-light">{this.props.day.weather[0].description}</button>
           </div>
         </div>
       </div>

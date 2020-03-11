@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import WeekContainer from './components/WeekContainer/WeekContainer'
+import WeekContainerDieppe from './components/WeekContainerDieppe/WeekContainerDieppe'
 import axios from 'axios'
 import './App.css'
 
@@ -34,10 +34,15 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <div className="bodyApp text-center">
-                    <p>Il fait {temperature} degrés, ressenti : {ressenti}, description : {description}</p>
-                    <img src={`http://openweathermap.org/img/w/${image}.png`} />
-                    <WeekContainer />
+                <div className="bodyApp text-center pt-2">
+                    <div className="card bg-light mx-auto">
+                        <p>Il fait actuellement {temperature}°C, ressenti : {ressenti}°C</p>
+                        <img src={`http://openweathermap.org/img/w/${image}.png`} alt="img" style={{'width':'50px','margin':'auto'}} />
+                        <div className="card-body">
+                            <p className="btn btn-dark btn-outline-light">{description}</p>
+                        </div>
+                    </div>
+                    <WeekContainerDieppe />
                 </div>
                 <Footer />
             </div>

@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 let appKey = process.env.REACT_APP_API_KEY
 const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=dieppe&lang=fr&units=metric&appid=${appKey}`;
 
-class WeekContainer extends Component {
+class WeekContainerDieppe extends Component {
   state = {
     days: []
   }
@@ -34,4 +34,4 @@ class WeekContainer extends Component {
   }
 }
 
-export default WeekContainer
+export default WeekContainerDieppe
