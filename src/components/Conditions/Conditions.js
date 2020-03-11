@@ -9,6 +9,7 @@ const conditions = (props) => {
 
            {props.responseObj.cod === 200 ?
                <div>
+                   <h1>{props.responseObj.name}</h1>
                    <div className="card bg-light mx-auto">
                         <p>Il fait actuellement {props.responseObj.main.temp}°C, ressenti : {props.responseObj.main.feels_like}°C</p>
                         <img src={`http://openweathermap.org/img/w/${props.responseObj.weather[0].icon}.png`} alt="img" style={{'width':'50px','margin':'auto'}} />

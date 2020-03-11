@@ -22,7 +22,8 @@ class App extends Component {
             temperature: response.data.main.temp,
             ressenti: response.data.main.feels_like,
             description: response.data.weather[0].description,
-            image: response.data.weather[0].icon});
+            image: response.data.weather[0].icon,
+            ville: response.data.name});
         })
         .catch(error => {
           console.log(error);
@@ -30,11 +31,12 @@ class App extends Component {
     }
 
     render () {
-        const { temperature, ressenti, description, image } = this.state;
+        const { temperature, ressenti, description, image, ville } = this.state;
         return (
             <div>
                 <div className="bodyApp text-center pt-2">
                     <Header />
+                    <h1>{ville}</h1>
                     <div className="card bg-light mx-auto">
                         <p>Il fait actuellement {temperature}°C</p>
                         <p>Ressenti : {ressenti}°C</p>
