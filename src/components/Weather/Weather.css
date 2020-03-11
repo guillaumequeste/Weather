@@ -1,3 +1,7 @@
+.bodyWeather {
+    min-height: 85vh;
+}
+
 .TextInput {
     font-size: large;
     border: 1px solid #EEEEEE;

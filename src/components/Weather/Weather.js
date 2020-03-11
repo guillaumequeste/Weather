@@ -28,9 +28,9 @@ const Weather = () => {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${uriEncodedCity}&units=${unit}&lang=fr&appid=${appKey}`)
     .then(response => response.json())
     .then(response => {
-        if (response.cod !== 200) {
-            throw new Error()
-        }
+        //if (response.cod !== 200) {
+            //throw new Error()
+        //}
         setResponseObj(response)
         setLoading(false);
     })
@@ -41,8 +41,9 @@ const Weather = () => {
         console.log(err.message);
     });
    }
+
    return (
-    <div>
+    <div className="bodyWeather">
         <p>Prévisions météo</p>
         <div>
             {JSON.stringify(responseObj)}

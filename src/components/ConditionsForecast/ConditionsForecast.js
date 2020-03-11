@@ -10,7 +10,7 @@ const ConditionsForecast = (props) => {
            {props.responseObj.cod === 200 ?
                <div>
                    <p><strong>{props.responseObj.name}</strong></p>
-                   <p>Il fait actuellement {Math.round(props.responseObj.list[0].main.temp)} degrés - </p>
+                   <p>Il fait actuellement {Math.round(props.responseObj.cnt)} degrés - </p>
                    
                </div>
            : null

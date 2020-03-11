@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import WeekContainer from './components/WeekContainer/WeekContainer'
 import axios from 'axios'
 import './App.css'
 
@@ -36,6 +37,7 @@ class App extends Component {
                 <div className="bodyApp text-center">
                     <p>Il fait {temperature} degrés, ressenti : {ressenti}, description : {description}</p>
                     <img src={`http://openweathermap.org/img/w/${image}.png`} />
+                    <WeekContainer />
                 </div>
                 <Footer />
             </div>
